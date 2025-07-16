@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeri Bengkel Awak</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      background: rgba(255,255,255,0.7);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .video-grid, .foto-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    video, img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-home a {
+      background: #ffffffaa;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-home a:hover {
+      background: #00bfff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Galeri Bengkel Awak</h1>
+
+  <div class="video-grid">
+    <video controls src="video1.mp4"></video>
+    <video controls src="video2.mp4"></video>
+  </div>
+
+  <div class="foto-grid">
+    <img src="galeri1.jpg" alt="Galeri 1">
+    <img src="galeri2.jpg" alt="Galeri 2">
+    <img src="galeri3.jpg" alt="Galeri 3">
+    <img src="galeri4.jpg" alt="Galeri 4">
+    <img src="galeri5.jpg" alt="Galeri 5">
+    <img src="galeri6.jpg" alt="Galeri 6">
+  </div>
+
+  <div class="back-home">
+    <a href="index.html">🏃‍♂️ Kembali ke Beranda</a>
+  </div>
+</body>
+</html>
