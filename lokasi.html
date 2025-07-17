@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lokasi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #222;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .map-container {
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .jadwal {
+      margin: 30px auto;
+      max-width: 500px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { box-shadow: 0 0 5px rgba(255,255,0,0.5); }
+      50% { box-shadow: 0 0 15px rgba(255,255,0,1); }
+    }
+
+    .jadwal table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    .jadwal th, .jadwal td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.8);
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 30px;
+      font-style: italic;
+      font-size: 14px;
+      color: #444;
+      background: rgba(255,255,255,0.5);
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>LOKASI PRAKTEK</h1>
+  <h2>BENGKEL AWAK~TERAPI KRETEK~KRETEK TEMANGGUNG</h2>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.329185493658!2d110.1437756!3d-7.628528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a982e3d4c9b33%3A0x80ec84b67ff5e4ae!2sMacanan%2C%20Mojosari%2C%20Kec.%20Bansari%2C%20Kabupaten%20Temanggung%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1710785583440!5m2!1sid!2sid"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <div class="jadwal">
+    <h3>Jadwal Praktek</h3>
+    <table>
+      <tr><th>Hari</th><th>Jam Praktek</th></tr>
+      <tr><td>Buka</td><td>08.00 - 18.00</td></tr>
+      <tr><td>Jumat</td><td>13.00 - 22.00</td></tr>
+      <tr><td>Sabtu</td><td>08.00 - 22.00</td></tr>
+      <tr><td>Minggu</td><td>08.00 - 18.00</td></tr>
+      <tr><td>Senin</td><td>08.00 - 22.00</td></tr>
+      <tr><td>Selasa</td><td>08.00 - 22.00</td></tr>
+      <tr><td>Rabu</td><td>08.00 - 22.00</td></tr>
+    </table>
+  </div>
+
+  <div style="text-align:center;">
+    <a class="back-button" href="index.html">🏃‍♂️ Kembali ke Beranda</a>
+  </div>
+
+  <div class="footer-note">
+    🪧 Alamat: Macanan, Mojosari, Kec. Bansari, Kabupaten Temanggung, Jawa Tengah, Indonesia
+  </div>
+
+</body>
+</html>
