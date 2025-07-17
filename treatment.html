@@ -1,0 +1,148 @@
+<!DOCTYPE html>                                                 <html lang="id">
+<head>                                                            <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artikel - Bengkel Awak</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #222;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin: 5px 0;
+      background: rgba(255,255,255,0.6);
+    }
+
+    .subtitle, .nib {
+      text-align: center;
+      font-size: 16px;
+      margin: 2px 0;
+      background: rgba(255,255,255,0.6);                              color: #000;
+      font-weight: bold;                                            }
+                                                                    .toggle-container {
+      text-align: center;
+      margin: 30px 0 10px;                                          }
+                                                                    .menu-toggle {
+      background: rgba(255,255,255,0.7);                              border: none;
+      padding: 10px 20px;                                             font-size: 16px;
+      font-weight: bold;                                              border-radius: 8px;
+      cursor: pointer;                                              }
+                                                                    .nav-menu {
+      display: none;                                                  justify-content: center;
+      flex-wrap: wrap;                                                gap: 15px;
+      margin-top: 15px;                                             }
+
+    .nav-menu a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      font-size: 14px;
+      transition: transform 0.3s;
+    }
+
+    .nav-menu img {
+      width: 32px;
+      height: 32px;
+      margin-bottom: 5px;
+    }
+                                                                    @keyframes spotlight {
+      0% { box-shadow: 0 0 0px rgba(255,215,0,0.8); transform: scale(1); }                                                            50% { box-shadow: 0 0 15px rgba(255,215,0,1); transform: scale(1.08); }
+      100% { box-shadow: 0 0 0px rgba(255,215,0,0.8); transform: scale(1); }
+    }                                                           
+    .nav-menu a.glow {                                                animation: spotlight 0.6s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+
+    .content {
+      background: rgba(255,255,255,0.65);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      background: rgba(255,255,255,0.8);
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);                          }
+
+    .back-button:hover {
+      background: #e0e0e0;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>BENGKEL AWAK</h1>
+  <h2>HALAMAN TREATMENT</h2>
+  <div class="subtitle">Informasi dan Artikel Seputar Terapi</div>
+  <div class="nib">NIB: 0909230027489 - IX/09/2023</div>
+
+  <div class="toggle-container">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ MENU</button>
+    <div class="nav-menu" id="navMenu">
+      <a href="index.html"><img src="https://img.icons8.com/color/48/home--v1.png"/>Beranda</a>
+      <a href="tentang.html"><img src="https://img.icons8.com/color/48/about.png"/>Tentang</a>
+      <a href="metode.html"><img src="https://img.icons8.com/color/48/massage.png"/>Metode</a>                                        <a href="treatment.html"><img src="https://img.icons8.com/color/48/stethoscope.png"/>Treatment</a>
+      <a href="galeri.html"><img src="https://img.icons8.com/color/48/picture.png"/>Galeri</a>
+      <a href="testimoni.html"><img src="https://img.icons8.com/color/48/happy.png"/>Testimoni</a>
+      <a href="lokasi.html"><img src="https://img.icons8.com/color/48/marker.png"/>Lokasi</a>
+      <a href="kontak.html"><img src="https://img.icons8.com/color/48/whatsapp--v1.png"/>Kontak</a>
+      <a href="artikel.html"><img src="https://img.icons8.com/color/48/news.png"/>Artikel</a>
+      <a href="faq.html"><img src="https://img.icons8.com/color/48/help.png"/>FAQ</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <p><em>Masih dalam proses. Silakan kembali lagi nanti (Sabar Njih...🙏)</em></p>
+  </div>
+
+  <div style="text-align:center;">
+    <a class="back-button" href="index.html">🏃‍♂️ Kembali ke Beranda</a>
+  </div>
+
+  <div class="footer-note">🦶 Kretek~kretek sejak 2023</div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      const links = menu.querySelectorAll("a");
+
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+        links.forEach(link => link.classList.remove("glow"));
+      } else {
+        menu.style.display = "flex";
+        links.forEach((link, i) => {
+          setTimeout(() => {
+            link.classList.add("glow");
+          }, i * 100);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
